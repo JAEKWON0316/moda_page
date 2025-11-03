@@ -1,0 +1,992 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daroom Smart Sensor Bin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #FCFAF6;
+            color: #333333;
+        }
+
+        .review-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .review-image-container,
+        .review-text-container {
+            flex: 1;
+            min-width: 50%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .review-item {
+                flex-direction: column !important;
+            }
+
+            .review-image-container,
+            .review-text-container {
+                min-width: 100%;
+            }
+
+            .review-text-container {
+                padding: 40px 25px !important;
+            }
+
+            .main-title {
+                font-size: 30px !important;
+            }
+
+            .review-title {
+                font-size: 24px !important;
+            }
+
+            .size-item {
+                flex-direction: column !important;
+                gap: 40px !important;
+            }
+
+            .size-item>div {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="margin: 0; padding: 0; background-color: #ffffff; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh;">
+
+    <main style="max-width: 1000px; width: 100%; padding: 0; box-sizing: border-box;">
+
+        <!-- First Section: 1000x1500 -->
+        <section style="position: relative; width: 100%; height: 1500px; overflow: hidden; background-color: #ffffff;">
+            <!-- Background Image -->
+            <img src="/modliving_img/001.jpg"
+                alt="A modern, beige, rectangular trash can with a lid stands on a light-colored tiled floor next to a plush, light gray sofa."
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+
+            <!-- Gradient Overlay -->
+            <div
+                style="position: absolute; left: 0; right: 0; top: 0; height: 50%; background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.85), rgba(255,255,255,0.6), transparent);">
+            </div>
+
+            <!-- Content -->
+            <div
+                style="position: relative; z-index: 10; padding: 80px 60px; height: 100%; display: flex; flex-direction: column;">
+                <header style="padding-top: 60px;">
+                    <h1
+                        style="font-size: 80px; font-weight: 900; color: #111827; line-height: 1.1; letter-spacing: -0.05em; margin: 0; font-family: 'Noto Sans KR', sans-serif;">
+                        다름 쓰레기통<br>
+                        이런분께 추천드려요!
+                    </h1>
+                </header>
+
+                <!-- Feature Bubbles -->
+                <div style="position: relative; flex-grow: 1; margin-top: 80px;">
+                    <div style="position: absolute; top: 8%; left: -20px;">
+                        <p
+                            style="background-color: rgba(255,255,255,0.8); backdrop-filter: blur(10px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-radius: 9999px; padding: 22px 48px; font-size: 28px; color: #1F2937; margin: 0; white-space: nowrap; font-family: 'Noto Sans KR', sans-serif;">
+                            열고 닫는 번거로움 없이 <span style="font-weight: 700; color: #A15E3C;">편리함을</span> 찾는 분
+                        </p>
+                    </div>
+                    <div style="position: absolute; top: 20%; left: 40px;">
+                        <p
+                            style="background-color: rgba(255,255,255,0.8); backdrop-filter: blur(10px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-radius: 9999px; padding: 22px 48px; font-size: 28px; color: #1F2937; margin: 0; white-space: nowrap; font-family: 'Noto Sans KR', sans-serif;">
+                            손대지 않고 위생적으로 쓰고 싶은 분
+                        </p>
+                    </div>
+                    <div style="position: absolute; top: 32%; right: -20px;">
+                        <p
+                            style="background-color: rgba(255,255,255,0.8); backdrop-filter: blur(10px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); border-radius: 9999px; padding: 22px 48px; font-size: 28px; color: #1F2937; margin: 0; white-space: nowrap; font-family: 'Noto Sans KR', sans-serif;">
+                            <span style="font-weight: 700; color: #A15E3C;">깔끔한 인테리어를</span> 원하시는 분
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Magnifying Glass -->
+                <div style="position: absolute; bottom: 12%; right: 2%; width: 360px; height: 360px;">
+                    <div style="position: relative; width: 100%; height: 100%;">
+                        <!-- Lens -->
+                        <div
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background-color: #FFFFFF; border: 20px solid #FFFFFF; box-shadow: 0 30px 60px rgba(0,0,0,0.25); overflow: hidden; z-index: 10;">
+                            <img src="/modliving_img/수건.jpg"
+                                alt="An exploded view of the trash can's internal mechanism"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="padding: 80px;">
+            <header style="text-align: left; margin-bottom: 60px;">
+                <p style="font-size: 20px; color: #3a3a3a; margin: 0 0 30px 0; font-weight: 400;">
+                    허리 숙일 필요 없이, 손쉽게 버리세요.
+                </p>
+                <h1
+                    style="font-size: 52px; color: #212121; font-weight: 800; line-height: 1.25; margin: 0 0 30px; letter-spacing: -1px;">
+                    다룸 자동센서<br>
+                    스마트 쓰레기통 슬릿형
+                </h1>
+                <p
+                    style="font-size: 18px; color: #757575; margin: 0; letter-spacing: 0.5px; font-family: 'Montserrat', sans-serif; font-weight: 400;">
+                    DAROOM SMART SENSOR BIN | <span style="color: #8d7b6f; font-weight: 600;">SLIT COVER</span>
+                </p>
+            </header>
+
+            <div style="position: relative;">
+                <img src="/modliving_img/003.jpg"
+                    alt="A minimalist living room with a woman in a beige sweater and black pants standing next to a modern metal shelving unit. In the foreground, a sleek white smart trash can with a black lid and black legs stands on a beige carpet."
+                    style="width: 900px; height: 900px; display: block; object-fit: cover;">
+
+                <div style="
+                    position: absolute;
+                    top: -45px;
+                    right: -70px;
+                    width: 90px;
+                    height: 90px;
+                    background-color: #000000;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: rotate(-15deg);
+                    color: #D4B896;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 22px;
+                    font-weight: 700;
+                    font-style: italic;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                ">
+                    new!
+                </div>
+            </div>
+        </div>
+        <div style="padding: 80px;">
+            <header style="text-align: left; margin-bottom: 60px;">
+                <p style="font-size: 20px; color: #3a3a3a; margin: 0 0 30px 0; font-weight: 400;">
+                    이제 손대지 말고, 스마트하게 버리세요!
+                </p>
+                <h1
+                    style="font-size: 52px; color: #212121; font-weight: 800; line-height: 1.25; margin: 0 0 30px; letter-spacing: -1px;">
+                    다룸 자동센서<br>
+                    스마트 쓰레기통 날개형
+                </h1>
+                <p
+                    style="font-size: 18px; color: #757575; margin: 0; letter-spacing: 0.5px; font-family: 'Montserrat', sans-serif; font-weight: 400;">
+                    DAROOM SMART SENSOR BIN | <span style="color: #8d7b6f; font-weight: 600;">DOUBLE COVER</span>
+                </p>
+            </header>
+
+            <div style="position: relative;">
+                <img src="/modliving_img/005.jpg"
+                    alt="A woman with long dark hair, seen from behind, wearing a cream-colored knit sweater and light-colored pants, stands in a modern kitchen with light wood cabinetry. She is reaching towards a dish rack on the counter. A sleek, off-white smart sensor trash bin is on the floor to the right."
+                    style="width: 900px; height: 900px; display: block; object-fit: cover;">
+                <div style="
+                    position: absolute;
+                    top: -45px;
+                    right: -60px;
+                    width: 90px;
+                    height: 90px;
+                    background-color: #000000;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: rotate(-15deg);
+                    color: #D4B896;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 22px;
+                    font-weight: 700;
+                    font-style: italic;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                ">
+                    BEST!
+                </div>
+            </div>
+        </div>
+
+        <header style="text-align: center; padding: 60px 20px 50px 20px;">
+            <h1 class="main-title"
+                style="font-size: 36px; font-weight: 700; margin: 0 0 20px 0; color: #333333; letter-spacing: -1px;">
+                찐 리뷰가 인정하는 찐- 쓰레기통
+            </h1>
+            <p style="font-size: 16px; color: #555555; line-height: 1.6; margin: 0;">
+                다름 자동센서 쓰레기통으로 완성된<br>고객님들의 생생한 리뷰를 확인해 보세요!
+            </p>
+        </header>
+
+        <section style="background-color: #D4C4B0; color: #4A4A4A; text-align: center; padding: 18px 20px;">
+            <h2 style="font-size: 18px; font-weight: 700; margin: 0; letter-spacing: -0.5px;">
+                극찬 후기들이 증명하는 이유 있는 1등
+            </h2>
+        </section>
+
+        <section class="reviews">
+            <article class="review-item">
+                <div class="review-image-container">
+                    <img src="https://placehold.co/800x800"
+                        alt="A sleek, off-white automatic trash can placed next to a wooden dining table and chair in a modern kitchen setting."
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+                <div class="review-text-container" style="padding: 60px;">
+                    <p style="font-size: 15px; color: #555555; margin: 0 0 10px 0;">kj****님</p>
+                    <div style="color: #D4B896; font-size: 20px; margin-bottom: 20px;">
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="review-title"
+                        style="font-size: 28px; font-weight: 700; margin: 0 0 20px 0; color: #333333; line-height: 1.3;">
+                        “꽉 차서 딱 좋아요!”
+                    </h3>
+                    <p style="font-size: 15px; color: #555555; line-height: 1.8; margin: 0;">
+                        어디에 둬도 인테리어 방해하지 않고<br>
+                        역할도 충실한 쓰레기통이에요!<br>
+                        20L봉투 넣기 위해 30L로 샀는데<br>
+                        가득 채우고 버릴 수 있어서 좋아요~
+                    </p>
+                </div>
+            </article>
+
+            <article class="review-item" style="flex-direction: row-reverse;">
+                <div class="review-image-container">
+                    <img src="https://placehold.co/800x800"
+                        alt="An off-white automatic trash can standing on a light-colored floor next to a geometric white pot with a tall green plant, and a large white-framed mirror leaning against the wall."
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+                <div class="review-text-container" style="padding: 60px;">
+                    <p style="font-size: 15px; color: #555555; margin: 0 0 10px 0;">dubl****님</p>
+                    <div style="color: #D4B896; font-size: 20px; margin-bottom: 20px;">
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="review-title"
+                        style="font-size: 28px; font-weight: 700; margin: 0 0 20px 0; color: #333333; line-height: 1.3;">
+                        “왜 진작 안샀지...”
+                    </h3>
+                    <p style="font-size: 15px; color: #555555; line-height: 1.8; margin: 0;">
+                        기존에 쓰던건 페달을 밟으니까 뒤로<br>
+                        밀려서 불편했는데 이건 가볍게 툭 쳐<br>
+                        도 자동으로 열리니까 너무 편리해요!<br>
+                        후기 좋은 이유가 있네요:)
+                    </p>
+                </div>
+            </article>
+
+            <article class="review-item">
+                <div class="review-image-container">
+                    <img src="https://placehold.co/800x800"
+                        alt="A ginger tabby cat standing on a wooden floor, looking up at an off-white automatic trash can placed next to a wooden shelf in a cozy room."
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+                <div class="review-text-container" style="padding: 60px;">
+                    <p style="font-size: 15px; color: #555555; margin: 0 0 10px 0;">gust****님</p>
+                    <div style="color: #D4B896; font-size: 20px; margin-bottom: 20px;">
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star" style="margin-right: 4px;"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="review-title"
+                        style="font-size: 28px; font-weight: 700; margin: 0 0 20px 0; color: #333333; line-height: 1.3;">
+                        “삶의 질이 높아져요.”
+                    </h3>
+                    <p style="font-size: 15px; color: #555555; line-height: 1.8; margin: 0;">
+                        센서 반응이 빠르고 뚜껑이 부드럽게<br>
+                        열리고 닫혀서 편리하네요. 냄새 차단<br>
+                        기능도 바로 효과가 느껴질만큼 꽉<br>
+                        닫히는게 만족스럽습니다.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <header style="padding: 80px 20px 60px 20px; text-align: center;">
+            <h1
+                style="font-family: 'Georgia', 'Times New Roman', serif; font-size: 42px; font-weight: 400; letter-spacing: 5px; margin: 0 0 40px 0; color: #3D3935;">
+                SMART SENSOR BIN</h1>
+            <p style="font-size: 17px; line-height: 1.7; margin: 0; color: #3D3935;">어디에 두어도 잘 어울리는 세련된 디자인과<br>작은
+                디테일 하나도 놓치지 않은 똑똑한 쓰레기통</p>
+            <p style="font-size: 17px; line-height: 1.7; margin: 30px 0 0 0; color: #3D3935;">다름으로 깨끗하고<br>편리한 일상을
+                시작해 보세요!</p>
+        </header>
+
+        <div style="padding: 80px;">
+            <section>
+                <img src="https://placehold.co/800x533"
+                    alt="A modern living room with a light gray sofa, a round marble coffee table, and a wooden shelf. Three smart sensor bins are placed around the room: one beige bin next to the sofa, one white bin on the wooden shelf, and another white bin on the floor next to the shelf. The room is brightly lit by natural light from a large window with sheer curtains."
+                    style="width: 100%; height: auto; display: block;">
+            </section>
+        </div>
+
+        <section style="display: grid; grid-template-columns: 1fr 1fr 1fr; background-color: #C9B8A3; color: #4A4A4A;">
+
+            <div
+                style="padding: 40px 10px; text-align: center; border-right: 1px solid #B5A392; border-bottom: 1px solid #B5A392; box-sizing: border-box;">
+                <div
+                    style="font-size: 36px; margin-bottom: 20px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-wifi"></i>
+                </div>
+                <p style="font-size: 14px; margin: 0; font-weight: 500; letter-spacing: 0.5px;">스마트 자동센서</p>
+            </div>
+
+            <div
+                style="padding: 40px 10px; text-align: center; border-right: 1px solid #B5A392; border-bottom: 1px solid #B5A392; box-sizing: border-box;">
+                <div
+                    style="font-size: 36px; margin-bottom: 20px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <p style="font-size: 14px; margin: 0; font-weight: 500; letter-spacing: 0.5px;">양문형 커버</p>
+            </div>
+
+            <div
+                style="padding: 40px 10px; text-align: center; border-bottom: 1px solid #B5A392; box-sizing: border-box;">
+                <div
+                    style="font-size: 36px; margin-bottom: 20px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-arrows-left-right-to-line"></i>
+                </div>
+                <p style="font-size: 14px; margin: 0; font-weight: 500; letter-spacing: 0.5px;">슬림 디자인</p>
+            </div>
+
+            <div
+                style="padding: 40px 10px; text-align: center; border-right: 1px solid #B5A392; box-sizing: border-box;">
+                <div
+                    style="font-size: 36px; margin-bottom: 20px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <span class="fa-stack" style="font-size: 1.2em;">
+                        <i class="fa-solid fa-circle fa-stack-2x"></i>
+                        <i class="fa-solid fa-wind fa-stack-1x" style="color: #C9B8A3;"></i>
+                        <i class="fa-solid fa-slash fa-stack-2x"></i>
+                    </span>
+                </div>
+                <p style="font-size: 14px; margin: 0; font-weight: 500; letter-spacing: 0.5px;">냄새 차단</p>
+            </div>
+
+            <div
+                style="padding: 40px 10px; text-align: center; border-right: 1px solid #B5A392; box-sizing: border-box;">
+                <div
+                    style="font-size: 36px; margin-bottom: 20px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <span class="fa-stack" style="font-size: 1.2em;">
+                        <i class="fa-solid fa-shield-halved fa-stack-2x"></i>
+                        <i class="fa-solid fa-plus fa-stack-1x" style="color: #C9B8A3;"></i>
+                    </span>
+                </div>
+                <p style="font-size: 14px; margin: 0; font-weight: 500; letter-spacing: 0.5px;">위생적인 설계</p>
+            </div>
+
+            <div style="padding: 40px 10px; text-align: center; box-sizing: border-box;">
+                <div
+                    style="font-size: 36px; margin-bottom: 20px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    <span class="fa-stack" style="font-size: 1.2em;">
+                        <i class="fa-solid fa-shield-halved fa-stack-2x"></i>
+                        <i class="fa-solid fa-droplet fa-stack-1x" style="color: #C9B8A3;"></i>
+                    </span>
+                </div>
+                <p style="font-size: 14px; margin: 0; font-weight: 500; letter-spacing: 0.5px;">IPX4 생활방수</p>
+            </div>
+
+        </section>
+
+        <header style="padding: 80px 20px 40px 20px; text-align: center;">
+            <h1
+                style="font-size: 36px; font-weight: 700; margin: 0; color: #333333; line-height: 1.4; letter-spacing: -1px;">
+                어디에 두어도 어울리는<br>
+                2가지 컬러
+            </h1>
+        </header>
+
+        <section style="margin-bottom: 100px;">
+            <img src="https://placehold.co/800x533/F5F1EA/F5F1EA"
+                alt="Three rectangular ivory-colored trash cans of varying sizes arranged on a light-colored floor with soft shadows in the background."
+                style="width: 100%; height: auto; display: block;">
+            <div style="margin-top: 40px; display: flex; align-items: flex-start; gap: 80px; padding: 0 20px;">
+                <h2
+                    style="font-size: 24px; font-weight: 700; color: #333333; margin: 0; white-space: nowrap; flex-shrink: 0;">
+                    아이보리
+                </h2>
+                <p style="font-size: 17px; color: #555555; line-height: 1.7; margin: 0; padding-top: 4px;">
+                    공간에 따뜻함을 더해주고 어떤<br>
+                    인테리어에도 자연스럽게 어울립니다.
+                </p>
+            </div>
+        </section>
+
+        <section style="padding: 0 0 80px 0;">
+            <img src="https://placehold.co/800x533/F0F0F0/F0F0F0"
+                alt="Three rectangular white-colored trash cans of varying sizes arranged on a light-colored floor with soft shadows in the background."
+                style="width: 100%; height: auto; display: block;">
+            <div style="margin-top: 40px; display: flex; align-items: flex-start; gap: 80px; padding: 0 20px;">
+                <h2
+                    style="font-size: 24px; font-weight: 700; color: #333333; margin: 0; white-space: nowrap; flex-shrink: 0;">
+                    화이트
+                </h2>
+                <p style="font-size: 17px; color: #555555; line-height: 1.7; margin: 0; padding-top: 4px;">
+                    모던한 느낌을 살리면서 공간을 한층<br>
+                    밝고 넓어 보이게 해줍니다.
+                </p>
+            </div>
+        </section>
+
+        <header style="text-align: center; padding: 80px 20px 60px 20px;">
+            <h1 style="font-size: 36px; font-weight: 700; margin: 0 0 24px 0; color: #3A3A3A; line-height: 1.4;">
+                다름 쓰레기통<br>
+                사이즈 가이드
+            </h1>
+            <p style="font-size: 16px; color: #3A3A3A; line-height: 1.6; margin: 0;">
+                라이프스타일에 따라 필요한 용량으로 선택하고,<br>
+                더 편리하고 효율적으로 관리하세요.
+            </p>
+        </header>
+
+        <section class="size-item" style="display: flex; align-items: center; gap: 80px; margin-bottom: 80px;">
+            <div style="width: 33.33%; display: flex; justify-content: center; align-items: center; min-height: 350px;">
+                <div style="position: relative; width: 170px; height: 280px;">
+                    <img src="https://placehold.co/100x200"
+                        alt="A line drawing of a tall, rectangular 10-liter trash can with a lid. Dimensions are shown: 15 width, 22 depth, and 36 height."
+                        style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);">
+                    <div
+                        style="position: absolute; top: 8px; right: 0; height: 200px; display: flex; align-items: center;">
+                        <span style="margin-right: 8px; font-size: 14px; color: #555555;">36</span>
+                        <div style="position: relative; height: 100%; width: 1px; background-color: #666666;">
+                            <div
+                                style="position: absolute; top: 0; right: -4px; width: 8px; height: 1px; background-color: #666666;">
+                            </div>
+                            <div
+                                style="position: absolute; bottom: 0; right: -4px; width: 8px; height: 1px; background-color: #666666;">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; left: 8px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="position: relative; width: 64px; height: 1px; background-color: #666666;">
+                            <div
+                                style="position: absolute; left: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                            <div
+                                style="position: absolute; right: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                        </div>
+                        <span style="margin-top: 4px; font-size: 14px; color: #555555;">15</span>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; right: 8px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="position: relative; width: 64px; height: 1px; background-color: #666666;">
+                            <div
+                                style="position: absolute; left: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                            <div
+                                style="position: absolute; right: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                        </div>
+                        <span style="margin-top: 4px; font-size: 14px; color: #555555;">22</span>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 66.67%;">
+                <div style="margin-bottom: 16px;">
+                    <span
+                        style="background-color: #C9B8A3; color: #4A4A4A; padding: 6px 16px; font-size: 14px; font-weight: 500;">10리터</span>
+                </div>
+                <div
+                    style="background-color: #FFFFFF; border: 1px solid #EAEAEA; padding: 20px; border-radius: 4px; margin-bottom: 16px; text-align: center;">
+                    <p style="color: #3A3A3A; font-size: 14px; line-height: 1.6; margin: 0;">
+                        #미니멀 디자인 #원룸형 1인 가구<br>
+                        10리터 종량제 봉투 맞춤 사이즈
+                    </p>
+                </div>
+                <div
+                    style="background-color: #FFFFFF; border: 1px solid #EAEAEA; padding: 20px; border-radius: 4px; text-align: center;">
+                    <p style="color: #3A3A3A; font-size: 14px; line-height: 1.6; margin: 0;">
+                        화장대, 화장실 등 좁은 공간에 딱 맞고<br>
+                        쓰레기를 빨리 채워버리는 분들께 추천드려요.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="size-item" style="display: flex; align-items: center; gap: 80px; margin-bottom: 80px;">
+            <div style="width: 33.33%; display: flex; justify-content: center; align-items: center; min-height: 350px;">
+                <div style="position: relative; width: 180px; height: 300px;">
+                    <img src="https://placehold.co/115x245"
+                        alt="A line drawing of a tall, rectangular 20-liter trash can with a lid, slightly larger than the 10-liter version. Dimensions are shown: 20.5 width, 28 depth, and 49 height."
+                        style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);">
+                    <div
+                        style="position: absolute; top: 0; right: 0; height: 245px; display: flex; align-items: center;">
+                        <span style="margin-right: 8px; font-size: 14px; color: #555555;">49</span>
+                        <div style="position: relative; height: 100%; width: 1px; background-color: #666666;">
+                            <div
+                                style="position: absolute; top: 0; right: -4px; width: 8px; height: 1px; background-color: #666666;">
+                            </div>
+                            <div
+                                style="position: absolute; bottom: 0; right: -4px; width: 8px; height: 1px; background-color: #666666;">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; left: 8px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="position: relative; width: 80px; height: 1px; background-color: #666666;">
+                            <div
+                                style="position: absolute; left: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                            <div
+                                style="position: absolute; right: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                        </div>
+                        <span style="margin-top: 4px; font-size: 14px; color: #555555;">20.5</span>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; right: 8px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="position: relative; width: 80px; height: 1px; background-color: #666666;">
+                            <div
+                                style="position: absolute; left: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                            <div
+                                style="position: absolute; right: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                        </div>
+                        <span style="margin-top: 4px; font-size: 14px; color: #555555;">28</span>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 66.67%;">
+                <div style="margin-bottom: 16px;">
+                    <span
+                        style="background-color: #C9B8A3; color: #4A4A4A; padding: 6px 16px; font-size: 14px; font-weight: 500;">20리터</span>
+                </div>
+                <div
+                    style="background-color: #FFFFFF; border: 1px solid #EAEAEA; padding: 20px; border-radius: 4px; margin-bottom: 16px; text-align: center;">
+                    <p style="color: #3A3A3A; font-size: 14px; line-height: 1.6; margin: 0;">
+                        #실용적인 디자인 #2-3인 가구<br>
+                        20리터 종량제 봉투 맞춤 사이즈
+                    </p>
+                </div>
+                <div
+                    style="background-color: #FFFFFF; border: 1px solid #EAEAEA; padding: 20px; border-radius: 4px; text-align: center;">
+                    <p style="color: #3A3A3A; font-size: 14px; line-height: 1.6; margin: 0;">
+                        부담스럽지 않으면서도 충분한 용량으로<br>
+                        가족 모두가 사용하는 공간에 제격이에요.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="size-item" style="display: flex; align-items: center; gap: 80px; padding-bottom: 80px;">
+            <div style="width: 33.33%; display: flex; justify-content: center; align-items: center; min-height: 350px;">
+                <div style="position: relative; width: 190px; height: 320px;">
+                    <img src="https://placehold.co/120x270"
+                        alt="A line drawing of a tall, rectangular 30-liter trash can with a lid, the largest of the three. Dimensions are shown: 23 width, 31.5 depth, and 54 height."
+                        style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);">
+                    <div
+                        style="position: absolute; top: 0; right: 0; height: 270px; display: flex; align-items: center;">
+                        <span style="margin-right: 8px; font-size: 14px; color: #555555;">54</span>
+                        <div style="position: relative; height: 100%; width: 1px; background-color: #666666;">
+                            <div
+                                style="position: absolute; top: 0; right: -4px; width: 8px; height: 1px; background-color: #666666;">
+                            </div>
+                            <div
+                                style="position: absolute; bottom: 0; right: -4px; width: 8px; height: 1px; background-color: #666666;">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; left: 8px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="position: relative; width: 80px; height: 1px; background-color: #666666;">
+                            <div
+                                style="position: absolute; left: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                            <div
+                                style="position: absolute; right: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                        </div>
+                        <span style="margin-top: 4px; font-size: 14px; color: #555555;">23</span>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 0; right: 8px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="position: relative; width: 80px; height: 1px; background-color: #666666;">
+                            <div
+                                style="position: absolute; left: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                            <div
+                                style="position: absolute; right: 0; top: -4px; height: 8px; width: 1px; background-color: #666666;">
+                            </div>
+                        </div>
+                        <span style="margin-top: 4px; font-size: 14px; color: #555555;">31.5</span>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 66.67%;">
+                <div style="margin-bottom: 16px;">
+                    <span
+                        style="background-color: #C9B8A3; color: #4A4A4A; padding: 6px 16px; font-size: 14px; font-weight: 500;">30리터</span>
+                </div>
+                <div
+                    style="background-color: #FFFFFF; border: 1px solid #EAEAEA; padding: 20px; border-radius: 4px; margin-bottom: 16px; text-align: center;">
+                    <p style="color: #3A3A3A; font-size: 14px; line-height: 1.6; margin: 0;">
+                        #실용적인 디자인 #3-4인 이상 가구<br>
+                        20리터 종량제 봉투 꽉 차는 사이즈
+                    </p>
+                </div>
+                <div
+                    style="background-color: #FFFFFF; border: 1px solid #EAEAEA; padding: 20px; border-radius: 4px; text-align: center;">
+                    <p style="color: #3A3A3A; font-size: 14px; line-height: 1.6; margin: 0;">
+                        쓰레기 처리량이 많고 봉투를 꽉 채워<br>
+                        버리는 분들께 추천드려요.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: #E8DCC8; width: 100%; margin: 0 -20px; padding: 0; box-sizing: content-box;">
+            <header style="padding: 80px 32px 128px 32px; text-align: left;">
+                <p
+                    style="font-size: 16px; font-weight: 300; letter-spacing: 0.2em; color: rgba(255, 255, 255, 0.8); margin: 0 0 12px 0; font-family: 'Montserrat', sans-serif;">
+                    daroom
+                </p>
+                <h1
+                    style="font-size: 48px; font-weight: 400; letter-spacing: 0.2em; margin: 0; color: rgba(255, 255, 255, 0.95); font-family: 'Montserrat', sans-serif;">
+                    SMART SENSOR BIN
+                </h1>
+            </header>
+            <div style="display: flex; flex-direction: column; width: 100%; gap: 80px; padding-bottom: 80px;">
+                <div style="display: flex; justify-content: flex-end; width: 100%;">
+                    <img src="https://placehold.co/600x800"
+                        alt="A woman with long dark hair, seen from behind, relaxing on a light-colored sofa in a brightly sunlit living room. A modern, white rectangular smart sensor bin stands on the floor to the right of the sofa, with sunlight casting shadows on the floor."
+                        style="width: 70%; height: auto; display: block; object-fit: cover;">
+                </div>
+                <div style="display: flex; justify-content: flex-start; width: 100%;">
+                    <img src="https://placehold.co/600x800"
+                        alt="A white smart sensor bin placed on a rustic wooden end table next to a small white vase. In the foreground, a person is out of focus, flipping through the pages of a magazine."
+                        style="width: 70%; height: auto; display: block; object-fit: cover;">
+                </div>
+                <div style="display: flex; justify-content: flex-end; width: 100%;">
+                    <img src="https://placehold.co/600x800"
+                        alt="A close-up, top-down view of a person's hand waving over the open lid of an off-white smart sensor bin. The interior of the bin is visible, and the person is standing on a carpeted floor next to a sofa."
+                        style="width: 70%; height: auto; display: block; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <section style="max-width: 1000px; margin: 0 auto; padding: 64px 32px;">
+            <div style="border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; padding: 16px 0;">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #6B7280; font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em; font-weight: 500;">
+                    <span>01</span>
+                    <span>SMART SENSOR</span>
+                </div>
+            </div>
+            <div style="margin-top: 96px;">
+                <h1
+                    style="font-size: 48px; font-weight: 700; color: #1F2937; line-height: 1.2; letter-spacing: -0.02em; margin: 0;">
+                    편리함을 더한<br>
+                    스마트 자동센서
+                </h1>
+                <p style="margin-top: 32px; font-size: 18px; color: #4B5563; line-height: 1.6;">
+                    허리를 숙이지 않고 편리하게 사용하세요.<br>
+                    움직임이 감지되면 자동으로 커버가 열리고<br>
+                    시간이 지나면 알아서 스르륵 닫아줘요.
+                </p>
+            </div>
+        </section>
+
+        <section style="max-width: 1000px; margin: 0 auto;">
+            <header>
+                <img src="modaliving_template/12.gif"
+                    alt="A woman with long brown hair, wearing a cream-colored cardigan and black pants, sits in a modern office chair at a wooden desk. She is reaching out to touch the top of a sleek, white smart trash can. The room has a minimalist aesthetic with a desk lamp and a small clock on the desk."
+                    style="width: 100%; height: auto; display: block; object-fit: cover;">
+            </header>
+            <div style="padding: 64px 40px;">
+                <div style="border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; padding: 16px 0;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #6B7280; font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em; font-weight: 500;">
+                        <span>02</span>
+                        <span>WOODEN LEGS</span>
+                    </div>
+                </div>
+                <section style="margin-top: 48px;">
+                    <h1 style="font-size: 48px; font-weight: 900; color: #111827; line-height: 1.2; margin: 0;">
+                        허리 편한 높이<br>
+                        다릿발 추가
+                    </h1>
+                    <p style="margin-top: 24px; font-size: 18px; color: #4B5563; line-height: 1.6;">
+                        쓰레기 버릴 때 허리 숙이는 게 귀찮으셨죠?<br>
+                        허리는 편하게, 생활은 더 편리하게 만들어 드릴게요.
+                    </p>
+                </section>
+            </div>
+        </section>
+
+        <section style="max-width: 1000px; margin: 0 auto;">
+            <div style="padding: 64px 24px 96px 24px;">
+                <p style="font-size: 24px; color: #1F2937; line-height: 1.6; margin: 0;">
+                    가까이 다가가거나 발로 툭 차기만 하면 되니까<br>
+                    깔끔하고 더 편리하게 사용할 수 있어요.
+                </p>
+            </div>
+            <div>
+                <img src="https://placehold.co/1000x667/f5f2ef/333333"
+                    alt="A close-up of a person's hand hovering over a cream-colored automatic trash can, causing the lid to open. The background is brightly lit and blurry, suggesting a window."
+                    style="width: 100%; height: auto; display: block; object-fit: cover;">
+            </div>
+            <div>
+                <img src="https://placehold.co/1000x1500/f5f2ef/333333"
+                    alt="A person wearing light-colored pants and slippers stands in a modern kitchen with light wood cabinets, with their foot near a cream-colored automatic trash can on the floor."
+                    style="width: 100%; height: auto; display: block; object-fit: cover;">
+            </div>
+        </section>
+
+        <section
+            style="max-width: 1000px; margin: 0 auto; padding: 128px 32px; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+            <div>
+                <h1 style="font-size: 48px; font-weight: 700; color: #1F2937; line-height: 1.2; margin: 0 0 32px 0;">
+                    장시간 사용할 땐<br>
+                    열어두고 사용하세요!
+                </h1>
+                <p style="font-size: 20px; color: #4B5563; line-height: 1.6; margin: 0;">
+                    가볍게 터치로 조작이 가능하고<br>
+                    5분이 경과하면 자동으로 닫혀요.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <figure>
+                <img src="https://placehold.co/1200x1500"
+                    alt="A woman in a beige cardigan and dark jeans stands in a minimalist room, holding a small dark cup. To her left are two modern, light-gray trash cans, one with short legs and one with taller legs. In the background is a gray modular shelving system with books and decorative objects."
+                    style="width: 100%; height: auto; display: block; object-fit: cover;">
+            </figure>
+            <div style="max-width: 1000px; margin: 0 auto; padding: 0 24px;">
+                <div style="padding: 80px 0;">
+                    <div style="border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB; padding: 16px 0;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #6B7280; font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em; font-weight: 500;">
+                            <span>03</span>
+                            <span>STERILIZATION</span>
+                        </div>
+                    </div>
+                    <h1
+                        style="font-size: 48px; font-weight: 700; color: #111827; margin: 48px 0 0 0; letter-spacing: -0.02em; line-height: 1.2;">
+                        깨끗함이 쉬워지는 순간
+                    </h1>
+                    <p style="font-size: 20px; color: #374151; margin: 24px 0 0 0; line-height: 1.6;">
+                        매일 사용하는 제품, 위생은 기본이죠.<br>
+                        우리 가족의 건강을 지키기 위해 살균 기능을 더했어요.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section style="max-width: 1000px; margin: 0 auto; display: flex; gap: 40px; padding: 0 20px 80px 20px;">
+            <div style="flex: 1;">
+                <img src="https://placehold.co/1000x1200" alt="Product image 1"
+                    style="width: 100%; height: auto; display: block; object-fit: cover;">
+            </div>
+            <div style="flex: 1;">
+                <img src="https://placehold.co/1000x1200" alt="Product image 2"
+                    style="width: 100%; height: auto; display: block; object-fit: cover;">
+            </div>
+        </section>
+
+        <section style="background-color: #F5F3E9; padding: 80px 0;">
+            <div style="max-width: 800px; margin: 0 auto; padding: 0 40px; color: #3F3A3A;">
+                <header
+                    style="border-top: 1px solid #D1CABD; border-bottom: 1px solid #D1CABD; padding: 16px 0; margin-bottom: 48px;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #6B7280; font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em; font-weight: 500;">
+                        <span>04</span>
+                        <span>ODOR BLOCKING</span>
+                    </div>
+                </header>
+                <div>
+                    <section style="margin-bottom: 48px;">
+                        <h1 style="font-size: 48px; font-weight: 700; line-height: 1.2; margin: 0 0 32px 0;">
+                            완벽한 밀폐력으로<br>
+                            냄새 차단
+                        </h1>
+                        <p style="font-size: 20px; line-height: 1.6; margin: 0;">
+                            내 집 악취 때문에 골머리 썩지 않으셨나요?<br>
+                            다름은 조금의 냄새도 용납할 수 없었어요.
+                        </p>
+                    </section>
+                    <section style="margin-bottom: 48px;">
+                        <div style="border-radius: 20px; overflow: hidden;">
+                            <img src="https://placehold.co/600x400/f0f0f0/333"
+                                alt="A composite image showing a close-up of a baby's feet held by a mother's hand on the left, and a beagle dog looking up next to a soiled puppy pad on the right, split by a soft diagonal line."
+                                style="width: 100%; height: auto; display: block; object-fit: cover;">
+                        </div>
+                    </section>
+                    <section
+                        style="margin-bottom: 80px; padding: 40px; background-color: rgba(255, 255, 255, 0.3); border-radius: 24px;">
+                        <div style="width: fit-content; max-width: 70%; margin-bottom: 12px;">
+                            <div
+                                style="background-color: #FFFFFF; padding: 18px 22px; border-radius: 18px; border-bottom-left-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                                <p style="font-size: 16px; line-height: 1.5; margin: 0; color: #2D2D2D;">각종 쓰레기 냄새
+                                    때문에 너무 힘들어요 ㅜ</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: flex-end; align-items: flex-end; gap: 10px;">
+                            <div
+                                style="background: linear-gradient(135deg, #B5A291 0%, #A08F7E 100%); padding: 18px 22px; border-radius: 18px; border-bottom-right-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); max-width: calc(100% - 66px);">
+                                <p style="color: #FFFFFF; font-size: 16px; line-height: 1.5; margin: 0;">
+                                    다름 쓰레기통이라면 걱정 없어요!<br>
+                                    밀착 커버로 냄새를 꽉 잡아 쾌적함을 유지해 줘요.
+                                </p>
+                            </div>
+                            <div
+                                style="width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #FFFFFF 0%, #F8F8F8 100%); border: 2px solid #E5E7EB; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
+                                <span
+                                    style="font-size: 11px; font-weight: 700; color: #3F3A3A; letter-spacing: 0.5px;">daroom</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section style="max-width: 1000px; margin: 0 auto; padding: 80px 40px;">
+            <p style="text-align: center; font-size: 20px; line-height: 1.6; margin: 0; color: #3F3A3A;">
+                다름 쓰레기통은 양쪽 커버가<br>
+                부드럽게 개폐되고 맞물리는 구조이기에<br>
+                완벽한 밀폐가 가능해요.
+            </p>
+        </section>
+
+        <section style="max-width: 800px; margin: 0 auto; padding: 64px 32px;">
+            <header style="display: flex; align-items: center; margin-bottom: 40px;">
+                <h2
+                    style="font-size: 24px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400; color: #a98f7a; white-space: nowrap; margin: 0;">
+                    + Details</h2>
+                <div style="width: 100%; height: 1px; background-color: #a98f7a; margin-left: 16px;"></div>
+            </header>
+
+            <section style="margin-bottom: 48px; text-align: left;">
+                <h1 style="font-size: 36px; font-weight: 900; color: #1F2937; line-height: 1.2; margin: 0;">
+                    더 편리한 사용을 위해<br>
+                    섬세한 디테일까지 추가했어요!
+                </h1>
+            </section>
+
+            <section style="margin-bottom: 48px;">
+                <img src="https://placehold.co/800x533/e0dcd5/4a4a4a"
+                    alt="A close-up shot of the bottom corner of a beige container with four sturdy dark gray feet, resting on a light brown textured carpet."
+                    style="width: 100%; height: auto; display: block;">
+            </section>
+
+            <section style="display: flex; align-items: flex-start; margin-bottom: 96px; gap: 32px;">
+                <h3
+                    style="font-size: 24px; font-weight: 700; color: #1F2937; white-space: nowrap; padding-top: 4px; margin: 0;">
+                    고무다리</h3>
+                <p style="font-size: 18px; color: #374151; line-height: 1.6; margin: 0;">
+                    바닥에 단단히 밀착돼 쓰레기통이<br>
+                    쉽게 밀리거나 흔들리지 않습니다.
+                </p>
+            </section>
+
+            <section style="margin-bottom: 40px; text-align: left;">
+                <h2 style="font-size: 36px; font-weight: 900; color: #1F2937; margin: 0 0 16px 0;">기호에 맞춰 사용하세요.
+                </h2>
+                <p style="font-size: 18px; color: #374151; margin: 0;">결합 방식에 따라 다양하게 활용할 수 있습니다.</p>
+            </section>
+
+            <section style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 96px;">
+                <figure style="text-align: left; margin: 0;">
+                    <div style="position: relative; margin-bottom: 16px;">
+                        <img src="https://placehold.co/400x400/f0f0f0/333333"
+                            alt="A person's hand screwing a black wooden leg clockwise into the bottom of a gray container."
+                            style="width: 100%; height: auto; display: block;">
+                        <div
+                            style="position: absolute; top: 16px; left: 16px; background-color: #000000; color: #FFFFFF; padding: 4px 12px; font-size: 14px; font-weight: 700;">
+                            나무다리</div>
+                    </div>
+                    <figcaption style="font-size: 16px; color: #374151; margin: 0;">시계 방향으로 돌려 끼워서 결합하세요.
+                    </figcaption>
+                </figure>
+                <figure style="text-align: left; margin: 0;">
+                    <div style="position: relative; margin-bottom: 16px;">
+                        <img src="https://placehold.co/400x400/f0f0f0/333333"
+                            alt="A person's hand pushing a small black rubber cap into a hole on the bottom of a gray container."
+                            style="width: 100%; height: auto; display: block;">
+                        <div
+                            style="position: absolute; top: 16px; left: 16px; background-color: #000000; color: #FFFFFF; padding: 4px 12px; font-size: 14px; font-weight: 700;">
+                            고무다리</div>
+                    </div>
+                    <figcaption style="font-size: 16px; color: #374151; margin: 0;">구멍에 맞춰 끼워서 결합하세요.</figcaption>
+                </figure>
+            </section>
+
+            <section style="background-color: #f5f5f5; padding: 24px; display: flex; align-items: center; gap: 24px;">
+                <div style="flex-shrink: 0;">
+                    <img src="https://placehold.co/100x100/ffffff/000000"
+                        alt="A diagram showing the bottom of a stool with four black legs, each fitted with a small silver-bottomed rubber cap for anti-slip."
+                        style="background-color: #FFFFFF; padding: 8px; border-radius: 8px; display: block;">
+                </div>
+                <div>
+                    <h4
+                        style="font-size: 18px; font-weight: 700; color: #1F2937; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0 0 8px 0;">
+                        TIP</h4>
+                    <p style="font-size: 16px; color: #374151; line-height: 1.6; margin: 0;">
+                        나무다리에 고무다리를 결합하여 사용하면 미끄럼 방지가 되어 더욱 안정감 있게 사용할 수 있습니다.
+                    </p>
+                </div>
+            </section>
+        </section>
+
+        <section style="max-width: 800px; margin: 0 auto;">
+            <div style="padding: 96px 24px 64px 24px; text-align: left;">
+                <h1
+                    style="font-size: 36px; font-weight: 700; color: #1F2937; margin: 0 0 24px 0; letter-spacing: -0.02em;">
+                    분리해서 청소하세요.</h1>
+                <p style="font-size: 18px; color: #4B5563; line-height: 1.6; margin: 0;">
+                    본체, 봉투 걸이, 뚜껑의 총 3단계 분리 구조로<br>
+                    청결하게 관리할 수 있습니다.
+                </p>
+            </div>
+
+            <div style="position: relative;">
+                <img src="https://placehold.co/700x525/e9e5e1/e9e5e1"
+                    alt="A person in a light pink ribbed sweater and off-white pants kneeling on a tiled floor, placing a black inner component into a tall, rectangular, off-white trash can."
+                    style="width: 100%; height: auto; display: block;">
+                <div style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 50%);">
+                    <div style="position: relative; width: 256px; height: 256px;">
+                        <img src="https://placehold.co/300x300/ffffff/ffffff"
+                            alt="An exploded view of the trash can components, showing the off-white lid with two flaps, a black plastic bag holder, and the off-white main container with a black interior, all separated and floating against a white background."
+                            style="width: 100%; height: 100%; border-radius: 50%; display: block; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.2); border: 10px solid #FFFFFF;">
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 192px 24px 96px 24px; text-align: left;">
+                <h2
+                    style="font-size: 36px; font-weight: 700; color: #1F2937; margin: 0 0 24px 0; letter-spacing: -0.02em;">
+                    생활 오염도 거뜬 없어요.</h2>
+                <p style="font-size: 18px; color: #4B5563; line-height: 1.6; margin: 0;">
+                    2중 코팅 스테인리스 소재로<br>
+                    물때나 얼룩도 쉽게 지워지고<br>
+                    오랫동안 깨끗하게 사용할 수 있습니다.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>
